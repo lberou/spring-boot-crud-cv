@@ -1,0 +1,56 @@
+{
+  "personalInformation": {
+    "personalDetails": {
+      "name": "john",
+      "middleName": "alexis",
+      "surname": "smith",
+      "email": "jsmith@gmail.com",
+      "birthDate": "28/04/1984"
+    },
+    "address": {
+      "streetName": "Main Street",
+      "number": 1233,
+      "postalCode": 12345,
+      "city": "Athens",
+      "country": "Greece"
+    },
+    "phoneNumbers": [
+      {
+        "number": "6979123453",
+        "type": "mobile"
+      }
+    ]
+  },
+  "education": [
+    {
+      "title": "Software Developer",
+      "institution": "XYZ University",
+      "graduationDate": "01/01/2000"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Greek",
+      "level": "native"
+    }
+  ],
+  "workExperience": [
+    {
+      "companyName": "Agile Actors",
+      "position": "Software Enginner In Test",
+      "startDate": "01/01/2021",
+      "endDate": null,
+      "description": "Working at Payzy"
+    }
+  ],
+  "professionalSkills": [
+    {
+      "skill": "Java",
+      "level": "3/5"
+    },
+    {
+      "skill": "Javascript",
+      "level": "3/5"
+    }
+  ]
+}
