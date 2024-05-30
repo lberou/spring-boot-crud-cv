@@ -113,10 +113,10 @@ public class EmployeeService {
 
 
             if (Objects.nonNull(employee.getLanguages())) {
-                List<Languages> updatedLanguages = employee.getLanguages();
+                List<Languages> putLanguages = employee.getLanguages();
                 List<Languages> existingLanguages = employeeExisting.getLanguages();
 
-                for (Languages language : updatedLanguages) {
+                for (Languages language : putLanguages) {
                     if (!existingLanguages.contains(language)) {
                         existingLanguages.add(language);
                     }
@@ -124,10 +124,10 @@ public class EmployeeService {
             }
 
             if (Objects.nonNull(employee.getEducation())) {
-                List<Education> updatedEducations = employee.getEducation();
+                List<Education> putEducations = employee.getEducation();
                 List<Education> existingEducations = employeeExisting.getEducation();
 
-                for (Education education : updatedEducations) {
+                for (Education education : putEducations) {
                     if (!existingEducations.contains(education)) {
                         existingEducations.add(education);
                     }
@@ -137,10 +137,10 @@ public class EmployeeService {
 
 
             if (Objects.nonNull(employee.getWorkExperiences())) {
-                List<WorkExperience> updatedWorkExperiences = employee.getWorkExperiences();
+                List<WorkExperience> putWorkExperiences = employee.getWorkExperiences();
                 List<WorkExperience> existingWorkExperiences = employeeExisting.getWorkExperiences();
 
-                for (WorkExperience workExperience : updatedWorkExperiences) {
+                for (WorkExperience workExperience : putWorkExperiences) {
                     if (!existingWorkExperiences.contains(workExperience)) {
                         existingWorkExperiences.add(workExperience);
                     }
@@ -149,10 +149,10 @@ public class EmployeeService {
 
 
             if (Objects.nonNull(employee.getProfessionalSkills())) {
-                List<ProfessionalSkills> updatedProfessionalSkills = employee.getProfessionalSkills();
+                List<ProfessionalSkills> putProfessionalSkills = employee.getProfessionalSkills();
                 List<ProfessionalSkills> existingProfessionalSkills = employeeExisting.getProfessionalSkills();
 
-                for (ProfessionalSkills professionalSkill : updatedProfessionalSkills) {
+                for (ProfessionalSkills professionalSkill : putProfessionalSkills) {
                     if (!existingProfessionalSkills.contains(professionalSkill)) {
                         existingProfessionalSkills.add(professionalSkill);
                     }
