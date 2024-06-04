@@ -1,23 +1,18 @@
-package com.lberou.crud.entity;
-
-import jakarta.persistence.Embeddable;
+package com.lberou.crud.dto;
 
 import java.time.LocalDate;
 
-
-@Embeddable
-public class PersonalDetails {
-
+public class PersonalDetailsDTO {
     private String name;
     private String middleName;
     private String surname;
     private String email;
     private LocalDate birthDate;
 
-    public PersonalDetails() {
+    public PersonalDetailsDTO() {
     }
 
-    public PersonalDetails(String name, String middleName, String surname, String email, LocalDate birthDate) {
+    public PersonalDetailsDTO(String name, String middleName, String surname, String email, LocalDate birthDate) {
         this.name = name;
         this.middleName = middleName;
         this.surname = surname;
@@ -65,4 +60,3 @@ public class PersonalDetails {
         this.birthDate = birthDate;
     }
 }
-

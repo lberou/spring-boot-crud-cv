@@ -1,11 +1,9 @@
 package com.lberou.crud.dto;
 
-import com.lberou.crud.entity.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class EmployeeDto {
+public class EmployeeDTO {
     private Long id;
     private PersonalInformationDTO personalInformation;
     private List<EducationDTO> education;
@@ -13,14 +11,14 @@ public class EmployeeDto {
     private List<WorkExperienceDTO> workExperiences;
     private List<ProfessionalSkillsDTO> professionalSkills;
 
-    public EmployeeDto() {
+    public EmployeeDTO() {
         this.education=new ArrayList<>();
         this.languages=new ArrayList<>();
         this.workExperiences=new ArrayList<>();
         this.professionalSkills=new ArrayList<>();
     }
 
-    public EmployeeDto(Long id, PersonalInformationDTO personalInformation, List<EducationDTO> education, List<LanguagesDTO> languages, List<WorkExperienceDTO> workExperiences, List<ProfessionalSkillsDTO> professionalSkills) {
+    public EmployeeDTO(Long id, PersonalInformationDTO personalInformation, List<EducationDTO> education, List<LanguagesDTO> languages, List<WorkExperienceDTO> workExperiences, List<ProfessionalSkillsDTO> professionalSkills) {
         this.id = id;
         this.personalInformation = personalInformation;
         this.education = education;

@@ -1,10 +1,6 @@
-package com.lberou.crud.entity;
+package com.lberou.crud.dto;
 
-import jakarta.persistence.Embeddable;
-
-
-@Embeddable
-public class Address {
+public class AddressDTO {
 
     private String streetName;
     private int number;
@@ -12,10 +8,10 @@ public class Address {
     private String city;
     private String country;
 
-    public Address() {
+    public AddressDTO() {
     }
 
-    public Address(String streetName, int number, int postalCode, String city, String country) {
+    public AddressDTO(String streetName, int number, int postalCode, String city, String country) {
         this.streetName = streetName;
         this.number = number;
         this.postalCode = postalCode;
@@ -62,7 +58,4 @@ public class Address {
     public void setCountry(String country) {
         this.country = country;
     }
-
-
 }
-
