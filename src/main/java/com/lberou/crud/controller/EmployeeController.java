@@ -1,8 +1,11 @@
 package com.lberou.crud.controller;
 
+import com.lberou.crud.dto.EmployeeDTO;
 import com.lberou.crud.entity.Employee;
 import com.lberou.crud.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -13,9 +16,11 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
+
     @GetMapping("/")
-    public List<Employee> getEmployees() {
-        return employeeService.getEmployees();
+    public ResponseEntity<List<EmployeeDTO>> getEmployees(){
+        List<EmployeeDTO> users = employeeService.getEmployees();
+        return new ResponseEntity<>(users, HttpStatus.OK);
     }
 
 //    Without DTO
