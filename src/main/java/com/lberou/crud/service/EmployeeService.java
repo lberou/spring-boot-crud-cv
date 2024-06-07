@@ -1,8 +1,10 @@
 package com.lberou.crud.service;
 
+import com.lberou.crud.dto.EmployeeDTO;
 import com.lberou.crud.entity.*;
 import com.lberou.crud.exceptions.EmployeeAlreadyExistsException;
 import com.lberou.crud.exceptions.EmployeeNotFoundException;
+import com.lberou.crud.mapper.EmployeeMapper;
 import com.lberou.crud.repository.EmployeeRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,20 +14,26 @@ import org.springframework.web.bind.annotation.RequestBody;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class EmployeeService {
     private final EmployeeRepository employeeRepository;
 
-    //Repository Dependecny Injection
     @Autowired
     public EmployeeService(EmployeeRepository employeeRepository) {
         this.employeeRepository = employeeRepository;
     }
 
-    public List<Employee> getEmployees() {
-        return employeeRepository.findAll();
+    public List<EmployeeDTO> getEmployees() {
+        List<Employee> employees = employeeRepository.findAll();
+        return employees.stream().map(EmployeeMapper::mapToEmployeeDto).collect(Collectors.toList());
     }
+
+//    withoud DTO
+//    public List<Employee> getEmployees() {
+//        return employeeRepository.findAll();
+//    }
 
 
     public Employee getEmployeeById(Long id) {

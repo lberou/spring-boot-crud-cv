@@ -14,9 +14,15 @@ public class EmployeeController {
     private EmployeeService employeeService;
 
     @GetMapping("/")
-    public List<Employee> getStudent() {
+    public List<Employee> getEmployees() {
         return employeeService.getEmployees();
     }
+
+//    Without DTO
+//    @GetMapping("/")
+//    public List<Employee> getEmployees() {
+//        return employeeService.getEmployees();
+//    }
 
     @GetMapping("/{id}")
     public Employee getEmployeeById(@PathVariable("id") Long id) {
